@@ -112,6 +112,10 @@ body {
   border-bottom: 1px solid black;
 }
 
+.top-header .main-navigation__link-container:last-child {
+  border-bottom: none;
+}
+
 .top-header .main-navigation__link {
   padding: 1rem 0;
   box-sizing: border-box;
@@ -167,6 +171,13 @@ body {
   .top-header .main-navigation__link-container::after {
     width: 1px;
     right: calc(-1rem + 1px);
+  }
+}
+
+@media only screen and (max-width: 568px) and (orientation: landscape) {
+  .top-header__navigation {
+    height: auto;
+    padding-bottom: 3rem;
   }
 }
 
