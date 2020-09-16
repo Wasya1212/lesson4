@@ -5,6 +5,8 @@
 :root {
   scroll-behavior: smooth;
   font-family: 'Work Sans', sans-serif;
+  --mainTextColor: #000000;
+  --mainTextColorLight: #666666;
 }
 
 /* default body */
@@ -97,12 +99,12 @@ body {
   transform: translateX(-50%);
   width: 20vw;
   height: 3px;
-  background-color: black;
+  background-color: var(--mainTextColor);
 }
 
 .top-header .main-navigation {
   font-size: 24px;
-  color: black;
+  color: var(--mainTextColor);
 }
 
 .top-header .main-navigation__link-container {
@@ -151,7 +153,7 @@ body {
     transform: translateY(-50%);
     height: 60%;
     width: 2px;
-    background-color: black;
+    background-color: var(--mainTextColorLight);
   }
 
   .top-header .main-navigation__link-container:last-child::after {
