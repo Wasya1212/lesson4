@@ -256,6 +256,15 @@ body {
 
 /* main styles */
 
-main.content {
+.content {
   position: relative;
+}
+
+.content>* {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.content h3 {
+  font-size: 24px;
 }
