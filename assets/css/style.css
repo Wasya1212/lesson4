@@ -15,6 +15,15 @@
 
 /* default body */
 
+a {
+  display: block;
+  color: inherit;
+}
+
+picture {
+  display: block;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -267,4 +276,6 @@ body {
 
 .content h3 {
   font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
 }
