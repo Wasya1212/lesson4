@@ -120,3 +120,177 @@
         grid-column: 1 / 4;
     }
 }
+
+/* season products */
+
+.season-products {
+    width: 100%;
+    padding: 0 .5rem;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem .5rem;
+}
+
+.season-products__header {
+    grid-column: 1 / 3;
+}
+
+.season-products__product {
+    display: inline-block;
+}
+
+.season-products__product__picture {
+    width: 100%;
+}
+
+.season-products__product__name::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) scale(.5);
+    width: 0;
+    height: 0;
+    border-top: 1ch solid transparent;
+    border-left: 1ch solid red;
+    border-bottom: 1ch solid transparent;
+}
+
+.season-products__product__name-container {
+    position: relative;
+}
+
+.season-products__product__name-container a {
+    text-align: center;
+    text-decoration: none;
+}
+
+.season-products__product__name {
+    text-transform: capitalize;
+}
+
+.season-products__product img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.special-season-product {
+    position: relative;
+    max-width: 100%;
+    grid-column: 1 / 3;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid #999;
+}
+
+.special-season-product picture {
+    float: left;
+    width: 50%;
+}
+
+.special-season-product img {
+    width: 100%;
+}
+
+.special-season-product header {
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.special-season-product header a {
+    text-decoration: none;
+}
+
+.special-season-product header h4 {
+    margin-top: 0;
+}
+
+.special-season-product p {
+    margin-left: 50%;
+    width: 50%;
+    text-indent: 2ch;
+    padding-left: 1rem;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+.special-season-product footer {
+    padding-left: 1rem;
+    margin-left: 50%;
+    width: 50%;
+    text-align: right;
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+.season-products__special-product__details {
+    position: relative;
+    margin-right: 16px;
+}
+
+.season-products__special-product__details::after {
+    content: '>';
+    display: inline-block;
+    position: absolute;
+    right: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    line-height: 12px;
+    letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 569px) {
+    .season-products {
+        grid-template-columns: 1fr 1fr 1fr 300px;
+        grid-gap: 1rem;
+    }
+    .season-products__header {
+        grid-column: 1 / 5;
+    }
+    .special-season-product {
+        grid-column: 4 / 5;
+    }
+}
+
+@media only screen and (min-width: 569px) and (max-width: 759px) {
+    .season-products {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1rem;
+    }
+    .season-products__header {
+        grid-column: 1 / 4;
+    }
+    .special-season-product {
+        grid-column: 1 / 4;
+    }
+}
+
+@media only screen and (min-width: 760px) {
+    .special-season-product {
+        grid-row: 2 / 4;
+    }
+    .special-season-product p {
+        width: 100%;
+        margin: 0;
+    }
+    .special-season-product picture {
+        width: 100%;
+        float: none;
+    }
+    .special-season-product footer {
+        margin: 0;
+        width: 100%;
+    }
+}
