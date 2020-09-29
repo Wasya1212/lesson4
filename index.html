@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="shortcut icon" href="assets/icons/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/libs/splide/css/splide.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Mirai Sweet Cafe</title>
 </head>
@@ -46,12 +47,39 @@
   </header>
   <main class="content">
     <div class="intro">
-      <div class="intro__slider slider">
-        <div class="slider-container">
-          <div class="slider-container__picture">
-            <a href="products/product/2647">
-              <img src="assets/img/slider/pancake.png" alt="slider image by number 1">
-            </a>
+      <div class="slider splide">
+        <div class="splide__track">
+          <div class="splide__list">
+            <div class="slide splide__slide">
+              <div class="picture-container">
+                <a href="products/product/2647">
+                  <picture>
+                    <source srcset="assets/img/slider/pancake.png" media="(min-width: 569px)">
+                    <img src="assets/img/slider/pancake-min.png" alt="slider image by number 1">
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="slide splide__slide">
+              <div class="picture-container">
+                <a href="products/product/2647">
+                  <picture>
+                    <source srcset="assets/img/slider/pancake.png" media="(min-width: 569px)">
+                    <img src="assets/img/slider/pancake-min.png" alt="slider image by number 1">
+                  </picture>
+                </a>
+              </div>
+            </div>
+            <div class="slide splide__slide">
+              <div class="picture-container">
+                <a href="products/product/2647">
+                  <picture>
+                    <source srcset="assets/img/slider/pancake.png" media="(min-width: 569px)">
+                    <img src="assets/img/slider/pancake-min.png" alt="slider image by number 1">
+                  </picture>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -527,5 +555,7 @@
       <span class="bottom-footer__copyright">Copyright 2020. Designed by wasya1212. All rights reserved.</span>
     </div>
   </footer>
+  <script src="assets/libs/splide/js/splide.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
