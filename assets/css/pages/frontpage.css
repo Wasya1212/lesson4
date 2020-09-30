@@ -39,6 +39,9 @@
 }
 
 @media only screen and (min-width: 569px) {
+    .content .intro {
+        margin-top: 2rem;
+    }
     .slide .picture-container::before {
         padding-top: 45%;
     }
@@ -46,7 +49,8 @@
 
 /* categories */
 
-.categories {
+.content .categories {
+    margin-top: 2rem;
     position: relative;
 }
 
@@ -69,7 +73,8 @@
 }
 
 .categories .all-categories {
-    margin: 2rem 0 4rem 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     width: 100%;
 }
 
@@ -78,6 +83,9 @@
 }
 
 @media only screen and (min-width: 569px) {
+    .content .categories {
+        margin-top: 3rem;
+    }
     .categories__navigation {
         flex-wrap: nowrap;
     }
@@ -85,7 +93,7 @@
         width: auto;
     }
     .categories .all-categories {
-        margin: 4rem 0;
+        margin: 1rem 0 2rem 0;
     }
 }
 
@@ -135,6 +143,10 @@
 }
 
 /* season products */
+
+.content .season-products {
+    margin-top: 1rem;
+}
 
 .season-products {
     width: 100%;
@@ -310,6 +322,10 @@
 
 /* work schedule */
 
+.content .work-schedule {
+    margin-top: 3rem;
+}
+
 .work-schedule {
     position: relative;
     padding: 0 .5rem;
@@ -341,6 +357,10 @@
 }
 
 /* news */
+
+.content .news {
+    margin-top: 1rem;
+}
 
 .news {
     padding: 0 .5rem;
@@ -390,6 +410,9 @@
 }
 
 @media only screen and (min-width: 569px) {
+    .content .news {
+        margin-top: 2rem;
+    }
     .news {
         grid-template-columns: 1fr 1fr 1fr;
         grid-gap: 1rem;
@@ -434,6 +457,7 @@
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
 .about__header {
@@ -462,7 +486,15 @@
     text-indent: 2ch;
 }
 
+.about__title {
+    margin-bottom: 2rem;
+}
+
 @media only screen and (min-width: 569px) {
+    .about__title {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
     .about__description {
         padding: 0;
         width: calc(100% / 3);
