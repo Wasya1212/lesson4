@@ -414,3 +414,51 @@
         grid-column: 1 / 5;
     }
 }
+
+/* about */
+
+.content .about {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about__header {
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 1;
+}
+
+.about__description {
+    display: inline-block;
+    padding: 0 .5rem;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.about__description__picture {
+    width: 100%;
+}
+
+.about__description__title {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.about__description__text-info {
+    text-indent: 2ch;
+}
+
+@media only screen and (min-width: 569px) {
+    .about__description {
+        padding: 0;
+        width: calc(100% / 3);
+    }
+    .about__description__title {
+        text-align: left;
+        font-size: 20px;
+    }
+    .about__description__text {
+        padding: 0 .5rem;
+    }
+}
