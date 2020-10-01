@@ -1,8 +1,8 @@
 function showElement(element) {
   anime({
     targets: element,
-    backgroundColor: '#000',
-    borderRadius: ['0%', '50%'],
+    opacity: 1,
+    translateY: '0px',
     easing: 'easeInOutQuad'
   });
 }
@@ -10,8 +10,8 @@ function showElement(element) {
 function hideElement(element) {
   anime({
     targets: element,
-    backgroundColor: '#0f0',
-    borderRadius: ['0%', '50%'],
+    opacity: 0,
+    translateY: '200px',
     easing: 'easeInOutQuad'
   });
 }
@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   fadeOutElements.forEach((element, index) => {
     if (isOnScreen(element)) return;
-
     hideElement(element);
     window.addEventListener('scroll', scrollAppearListeners[index]);
   });
