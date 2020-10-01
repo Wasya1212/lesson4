@@ -34,6 +34,8 @@ function appearOnScroll(element, onAppear = () => { }) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  if (window.isMobileDeviceOrBrowser) return;
+  
   const fadeOutElements = Array.from(document.querySelectorAll('.content>*'));
   
   const scrollAppearListeners = fadeOutElements.map((element, index) => {
