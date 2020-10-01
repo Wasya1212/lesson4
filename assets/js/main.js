@@ -1,3 +1,30 @@
+function throttle(func, ms) {
+  let isThrottled = false,
+    savedArgs,
+    savedThis;
+
+  function wrapper() {
+    if (isThrottled) {
+      savedArgs = arguments;
+      savedThis = this;
+      return;
+    }
+
+    func.apply(this, arguments);
+    isThrottled = true;
+
+    setTimeout(function () {
+      isThrottled = false;
+      if (savedArgs) {
+        wrapper.apply(savedThis, savedArgs);
+        savedArgs = savedThis = null;
+      }
+    }, ms);
+  }
+
+  return wrapper;
+}
+
 const sliderOpts = {
   type: 'fade',
   autoplay: true,
@@ -11,9 +38,9 @@ const sliderOpts = {
 
 function checkElementOffset(element) {
   const windowHeight = window.innerHeight;
-  const elementHeight = element.offsetHeight;
+  const elementHeight = element.offsetHeight;  
 
-  window.addEventListener('scroll', e => {
+  window.addEventListener('scroll', throttle(e => {
     if (window.pageYOffset > windowHeight * 0.5) {
       element.classList.add('fixedToTop');
       document.body.style.marginTop = `${elementHeight}px`;
@@ -21,7 +48,7 @@ function checkElementOffset(element) {
       element.classList.remove('fixedToTop');
       document.body.removeAttribute('style');
     }
-  });
+  }, 100));
 }
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -1,0 +1,51 @@
+function showElement(element) {
+  anime({
+    targets: element,
+    backgroundColor: '#000',
+    borderRadius: ['0%', '50%'],
+    easing: 'easeInOutQuad'
+  });
+}
+
+function hideElement(element) {
+  anime({
+    targets: element,
+    backgroundColor: '#0f0',
+    borderRadius: ['0%', '50%'],
+    easing: 'easeInOutQuad'
+  });
+}
+
+function isOnScreen(element) {
+  const windowHeight = window.innerHeight;
+  const windowPosition = window.pageYOffset;
+  const elementPosition = element.offsetTop;
+
+  return (windowHeight * 0.6) + windowPosition >= elementPosition;
+}
+
+function appearOnScroll(element, onAppear = () => { }) {
+  return throttle(() => {
+    if (isOnScreen(element)) {
+      showElement(element);
+      onAppear();
+    }
+  }, 200);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const fadeOutElements = Array.from(document.querySelectorAll('.content>*'));
+  
+  const scrollAppearListeners = fadeOutElements.map((element, index) => {
+    return appearOnScroll(element, () => {
+      window.removeEventListener('scroll', scrollAppearListeners[index]);
+    });
+  });
+
+  fadeOutElements.forEach((element, index) => {
+    if (isOnScreen(element)) return;
+
+    hideElement(element);
+    window.addEventListener('scroll', scrollAppearListeners[index]);
+  });
+});
