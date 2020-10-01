@@ -87,6 +87,20 @@ body {
   align-items: center;
 }
 
+@keyframes slideIn {
+  from {
+    transform: translateY(-200px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.top-header.fixedToTop {
+  animation-duration: .5s;
+  animation-name: slideIn;
+}
+
 .top-header__logo {
   z-index: 99999;
   width: 65px;
