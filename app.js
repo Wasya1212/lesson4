@@ -35,7 +35,7 @@ app.use(async (ctx, next) => {
 });
 
 app.use(json());
-app.use(errorHandler({ errorLogger: logger, logMethodName: 'error' }));
+// app.use(errorHandler({ errorLogger: logger, logMethodName: 'error' }));
 app.use(serve(appConfig.staticFilesDist));
 app.use(router.routes());
 app.use(router.allowedMethods());
