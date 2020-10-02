@@ -1,0 +1,25 @@
+{
+    "slider": [
+        {
+            "image": {
+                "link": "img/slider/pancake-min.png",
+                "alt": "slider image by number"
+            },
+            "link": "products/product/2647"
+        },
+        {
+            "image": {
+                "link": "img/slider/pancake-min.png",
+                "alt": "slider image by number"
+            },
+            "link": "products/product/2647"
+        },
+        {
+            "image": {
+                "link": "img/slider/pancake-min.png",
+                "alt": "slider image by number"
+            },
+            "link": "products/product/2647"
+        }
+    ]
+}

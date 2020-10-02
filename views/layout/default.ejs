@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="libs/splide/css/splide.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Mirai Sweet Cafe</title>
+</head>
+
+<body>
+  <header class="top-header">
+    <div class="top-header__logo logo">
+      <div class="top-header__logo-container logo-container">
+        <a href="/">
+          <img src="img/cafe-logo.png" alt="header website logo">
+        </a>
+      </div>
+    </div>
+    <input type="checkbox" id="menu-switcher" checked="false">
+    <div class="top-header__menu-switch menu-switch-container">
+      <label class="top-header__menu-switch__btn" for="menu-switcher">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </label>
+    </div>
+    <nav class="top-header__navigation main-navigation">
+      <div class="main-navigation__link-container">
+        <a class="main-navigation__link" href="menu">daily menu</a>
+      </div>
+      <div class="main-navigation__link-container">
+        <a class="main-navigation__link" href="production">production</a>
+      </div>
+      <div class="main-navigation__link-container">
+        <a class="main-navigation__link" href="shop">online shop</a>
+      </div>
+      <div class="main-navigation__link-container">
+        <a class="main-navigation__link" href="about">about</a>
+      </div>
+      <div class="main-navigation__link-container">
+        <a class="main-navigation__link" href="contacts">contact with us</a>
+      </div>
+    </nav>
+  </header>
+  <main class="content">
+    <%- body %>
+  </main>
+  <footer class="bottom-footer">
+    <div class="bottom-footer__logo-container logo-container">
+      <a href="/">
+        <img src="img/cafe-logo.png" alt="header website logo">
+      </a>
+    </div>
+    <section class="bottom-footer__additional-info">
+      <a href="#">
+        <h1 class="bottom-footer__additional-info__title company-name company-title company">"mirai" sweet cafe</h1>
+      </a>
+      <div class="bottom-footer__additional-info__info-container">
+        <span class="bottom-footer__additional-info__phone phone">tel: +38066******7</span>
+        <span class="bottom-footer__additional-info__email email">email: example@mail.com</span>
+        <span class="bottom-footer__additional-info__work-schedule work-schedule schedule">open: 8:00 - 18:00
+          (Tuesday)</span>
+      </div>
+      <nav class="bottom-footer__navigation main-navigation">
+        <div class="main-navigation__link-container">
+          <a class="main-navigation__link" href="menu">daily menu</a>
+        </div>
+        <div class="main-navigation__link-container">
+          <a class="main-navigation__link" href="production">production</a>
+        </div>
+        <div class="main-navigation__link-container">
+          <a class="main-navigation__link" href="shop">online shop</a>
+        </div>
+        <div class="main-navigation__link-container">
+          <a class="main-navigation__link" href="about">about</a>
+        </div>
+        <div class="main-navigation__link-container">
+          <a class="main-navigation__link" href="contacts">contact with us</a>
+        </div>
+      </nav>
+    </section>
+    <div class="bottom-footer__copyright-container">
+      <span class="bottom-footer__copyright">Copyright 2020. <br> Designed by wasya1212. All rights reserved.</span>
+    </div>
+  </footer>
+  <script src="libs/animejs/anime.min.js"></script>
+  <script src="libs/splide/js/splide.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/frontpage.js"></script>
+</body>
+
+</html>
