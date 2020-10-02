@@ -19,7 +19,11 @@ const router = new Router();
 
 router.get('/', async ctx => {
   await ctx.render('pages/frontpage', {
-    sliderProducts: DB.slider
+    sliderProducts: DB.slider,
+    topProducts: DB.topProducts,
+    seasonProducts: DB.seasonProducts,
+    specialProduct: DB.specialProduct,
+    news: DB.news
   });
 });
 

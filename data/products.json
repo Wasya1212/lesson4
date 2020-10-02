@@ -5,12 +5,8 @@
                 "link": "img/slider/pancake-min.png",
                 "alt": "slider image by number"
             },
-            "link": "products/product/2647"
-        },
-        {
-            "image": {
-                "link": "img/slider/pancake-min.png",
-                "alt": "slider image by number"
+            "imageLarge": {
+                "link": "img/slider/pancake.png"
             },
             "link": "products/product/2647"
         },
@@ -19,7 +15,203 @@
                 "link": "img/slider/pancake-min.png",
                 "alt": "slider image by number"
             },
+            "imageLarge": {
+                "link": "img/slider/pancake.png"
+            },
             "link": "products/product/2647"
+        },
+        {
+            "image": {
+                "link": "img/slider/pancake-min.png",
+                "alt": "slider image by number"
+            },
+            "imageLarge": {
+                "link": "img/slider/pancake.png"
+            },
+            "link": "products/product/2647"
+        }
+    ],
+    "topProducts": [
+        {
+            "title": "strawberry and red beans mochi",
+            "image": {
+                "link": "img/top-products/3.png",
+                "alt": "clients top product 1 image"
+            },
+            "link": "products/product/2114"
+        },
+        {
+            "title": "cherry ice cream",
+            "image": {
+                "link": "img/top-products/1.png",
+                "alt": "clients top product 2 image"
+            },
+            "link": "products/product/1803"
+        },
+        {
+            "title": "strawberry tiramisu",
+            "image": {
+                "link": "img/top-products/2.png",
+                "alt": "clients top product 3 image"
+            },
+            "link": "products/product/1205"
+        },
+        {
+            "title": "taiyaki",
+            "image": {
+                "link": "img/top-products/5.png",
+                "alt": "clients top product 4 image"
+            },
+            "link": "products/product/1557"
+        },
+        {
+            "title": "\"sweet cats\" cake",
+            "image": {
+                "link": "img/top-products/4.png",
+                "alt": "clients top product 5 image"
+            },
+            "link": "products/product/2091"
+        },
+        {
+            "title": "red beans jelly",
+            "image": {
+                "link": "img/top-products/6.png",
+                "alt": "clients top product 6 image"
+            },
+            "link": "products/product/1051"
+        }
+    ],
+    "seasonProducts": [
+        {
+            "title": "creamy cake",
+            "image": {
+                "link": "img/season-products/1a.png",
+                "alt": "clients season product 1 image"
+            },
+            "link": "products/product/1301"
+        },
+        {
+            "title": "sweet cookies",
+            "image": {
+                "link": "img/season-products/6a.png",
+                "alt": "clients season product 2 image"
+            },
+            "link": "products/product/1250"
+        },
+        {
+            "title": "strawberry cheesecake",
+            "image": {
+                "link": "img/season-products/5a.png",
+                "alt": "clients season product 3 image"
+            },
+            "link": "products/product/1900"
+        },
+        {
+            "title": "read beans ice cream",
+            "image": {
+                "link": "img/season-products/3a.png",
+                "alt": "clients season product 4 image"
+            },
+            "link": "products/product/1442"
+        },
+        {
+            "title": "jiggly cheesecake",
+            "image": {
+                "link": "img/season-products/4a.png",
+                "alt": "clients season product 5 image"
+            },
+            "link": "products/product/1739"
+        },
+        {
+            "title": "strawberry trifle",
+            "image": {
+                "link": "img/season-products/2a.png",
+                "alt": "clients season product 6 image"
+            },
+            "link": "products/product/2301"
+        }
+    ],
+    "specialProduct": {
+        "title": "\"hello kitty\" cake",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        "image": {
+            "link": "img/jiggly-cake-special.png",
+            "alt": "special product this season image"
+        },
+        "link": "products/product/2739"
+    },
+    "news": [
+        {
+            "title": "some new",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptates pariatur ea?",
+            "image": {
+                "link": "img/news/news.png",
+                "alt": "some news image 1"
+            },
+            "link": "news/3057"
+        },
+        {
+            "title": "some new",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptates pariatur ea?",
+            "image": {
+                "link": "img/news/news.png",
+                "alt": "some news image 1"
+            },
+            "link": "news/3057"
+        },
+        {
+            "title": "some new",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptates pariatur ea?",
+            "image": {
+                "link": "img/news/news.png",
+                "alt": "some news image 1"
+            },
+            "link": "news/3057"
+        },
+        {
+            "title": "some new",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptates pariatur ea?",
+            "image": {
+                "link": "img/news/news.png",
+                "alt": "some news image 1"
+            },
+            "link": "news/3057"
+        },
+        {
+            "title": "some new",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptates pariatur ea?",
+            "image": {
+                "link": "img/news/news.png",
+                "alt": "some news image 1"
+            },
+            "link": "news/3057"
+        },
+        {
+            "title": "some new",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptates pariatur ea?",
+            "image": {
+                "link": "img/news/news.png",
+                "alt": "some news image 1"
+            },
+            "link": "news/3057"
+        },
+        {
+            "title": "some new",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptates pariatur ea?",
+            "image": {
+                "link": "img/news/news.png",
+                "alt": "some news image 1"
+            },
+            "link": "news/3057"
+        },
+        {
+            "title": "some new",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum voluptates pariatur ea?",
+            "image": {
+                "link": "img/news/news.png",
+                "alt": "some news image 1"
+            },
+            "link": "news/3057"
         }
     ]
 }

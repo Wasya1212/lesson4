@@ -2,19 +2,19 @@
   <div class="slider splide">
     <div class="splide__track">
       <div class="splide__list">
-        <!-- <% sliderProducts.forEach(product => { %>
+        <% sliderProducts.forEach(product => { %>
           <div class="slide splide__slide">
             <div class="picture-container">
               <a href="<%= product.link %>">
                 <picture>
-                  <source srcset="<%= product.image.link %>" media="(min-width: 569px)">
+                  <source srcset="<%= product.imageLarge.link %>" media="(min-width: 569px)">
                   <img src="<%= product.image.link %>" alt="<%= product.image.alt %>">
                 </picture>
               </a>
             </div>
           </div>
-        <% }) %> -->
-        <div class="slide splide__slide">
+        <% }) %>
+        <!-- <div class="slide splide__slide">
           <div class="picture-container">
             <a href="products/product/2647">
               <picture>
@@ -43,7 +43,7 @@
               </picture>
             </a>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -94,7 +94,24 @@
   <header class="top-products__header">
     <h3 class="top-products__title section-title">top products</h3>
   </header>
-  <div class="top-products__product">
+  <% topProducts.forEach(product => { %>
+    <div class="top-products__product">
+      <div class="top-products__product__picture">
+        <a href="<%= product.link %>">
+          <picture>
+            <source media="(min-width:650px)" srcset="<%= product.image.link %>">
+            <img src="<%= product.image.link %>" alt="<%= product.image.alt %>">
+          </picture>
+        </a>
+      </div>
+      <div class="top-products__product__name-container">
+        <a href="<%= product.link %>">
+          <span class="top-products__product__name"><%= product.title %></span>
+        </a>
+      </div>
+    </div>
+  <% }) %>
+  <!-- <div class="top-products__product">
     <div class="top-products__product__picture">
       <a href="products/product/2114">
         <picture>
@@ -108,8 +125,8 @@
         <span class="top-products__product__name">strawberry and red beans mochi</span>
       </a>
     </div>
-  </div>
-  <div class="top-products__product">
+  </div> -->
+  <!-- <div class="top-products__product">
     <div class="top-products__product__picture">
       <a href="products/product/1803">
         <picture>
@@ -183,13 +200,30 @@
         <span class="top-products__product__name">red beans jelly</span>
       </a>
     </div>
-  </div>
+  </div> -->
 </article>
 <article class="season-products">
   <header class="season-products__header">
     <h3 class="season-products__title section-title">sweets this season</h3>
   </header>
-  <div class="season-products__product">
+  <% seasonProducts.forEach(product => { %>
+    <div class="season-products__product">
+      <div class="season-products__product__picture">
+        <a href="<%= product.link %>">
+          <picture>
+            <source media="(min-width:650px)" srcset="<%= product.image.link %>">
+            <img src="<%= product.image.link %>" alt="<%= product.image.alt %>">
+          </picture>
+        </a>
+      </div>
+      <div class="season-products__product__name-container">
+        <a href="<%= product.link %>">
+          <span class="season-products__product__name"><%= product.title %></span>
+        </a>
+      </div>
+    </div>
+  <% }) %>
+  <!-- <div class="season-products__product">
     <div class="season-products__product__picture">
       <a href="products/product/1301">
         <picture>
@@ -203,8 +237,8 @@
         <span class="season-products__product__name">creamy cake</span>
       </a>
     </div>
-  </div>
-  <div class="season-products__product">
+  </div> -->
+  <!-- <div class="season-products__product">
     <div class="season-products__product__picture">
       <a href="products/product/1250">
         <picture>
@@ -218,8 +252,8 @@
         <span class="season-products__product__name">sweet cookies</span>
       </a>
     </div>
-  </div>
-  <div class="season-products__product">
+  </div> -->
+  <!-- <div class="season-products__product">
     <div class="season-products__product__picture">
       <a href="products/product/1900">
         <picture>
@@ -233,8 +267,8 @@
         <span class="season-products__product__name">strawberry cheesecake</span>
       </a>
     </div>
-  </div>
-  <div class="season-products__product">
+  </div> -->
+  <!-- <div class="season-products__product">
     <div class="season-products__product__picture">
       <a href="products/product/1442">
         <picture>
@@ -248,8 +282,8 @@
         <span class="season-products__product__name">read beans ice cream</span>
       </a>
     </div>
-  </div>
-  <div class="season-products__product">
+  </div> -->
+  <!-- <div class="season-products__product">
     <div class="season-products__product__picture">
       <a href="products/product/1739">
         <picture>
@@ -263,8 +297,8 @@
         <span class="season-products__product__name">jiggly cheesecake</span>
       </a>
     </div>
-  </div>
-  <div class="season-products__product">
+  </div> -->
+  <!-- <div class="season-products__product">
     <div class="season-products__product__picture">
       <a href="products/product/2301">
         <picture>
@@ -278,23 +312,23 @@
         <span class="season-products__product__name">strawberry trifle</span>
       </a>
     </div>
-  </div>
+  </div> -->
   <aside class="season-products__special-product special-product special-season-product">
     <header class="season-products__special-product__title-container">
-      <a href="products/product/2739" class="special-season-product-link special-season-product-link-cake">
-        <h4 class="season-products__special-product__title">"hello kitty" cake</h4>
+      <a href="<%= specialProduct.link %>" class="special-season-product-link special-season-product-link-cake">
+        <h4 class="season-products__special-product__title"><%= specialProduct.title %></h4>
       </a>
     </header>
     <picture>
-      <a href="products/product/2739">
-        <source media="(min-width:650px)" srcset="img/jiggly-cake-special.png">
-        <img src="img/jiggly-cake-special.png" alt="special product this season image">
+      <a href="<%= specialProduct.link %>">
+        <source media="(min-width:650px)" srcset="<%= specialProduct.image.link %>">
+        <img src="<%= specialProduct.image.link %>" alt="<%= specialProduct.image.alt %>">
       </a>
     </picture>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p><%= specialProduct.description %></p>
     <footer class="season-products__special-product__details-container">
       <div class="season-products__special-product__details">
-        <a href="products/product/2739" class="details-link redirect-link">details</a>
+        <a href="<%= specialProduct.link %>" class="details-link redirect-link">details</a>
       </div>
     </footer>
   </aside>
@@ -351,7 +385,23 @@
         useful in your daily life.</q>
     </p>
   </header>
-  <section class="news__item">
+  <% news.forEach(article => { %>
+    <section class="news__item">
+      <a href="<%= article.link %>">
+        <div class="news__item__picture">
+          <img src="<%= article.image.link %>" alt="<%= article.image.alt %>">
+      </a>
+      </div>
+      <div class="news__item__title-container">
+        <h4 class="news__item__title"><%= article.title %></h4>
+      </div>
+      <div class="news__item__description-container">
+        <p class="news__item__description"><%= article.description %></p>
+      </div>
+      </a>
+    </section>
+  <% }) %>
+  <!-- <section class="news__item">
     <a href="news/3057">
       <div class="news__item__picture">
         <img src="img/news/news.png" alt="some news image 1">
@@ -470,7 +520,7 @@
         pariatur ea?</p>
     </div>
     </a>
-  </section>
+  </section> -->
 </article>
 <article class="about">
   <header class="about__header">
