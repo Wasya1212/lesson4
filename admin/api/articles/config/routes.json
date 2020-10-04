@@ -2,48 +2,48 @@
   "routes": [
     {
       "method": "GET",
-      "path": "/sdfs",
-      "handler": "sdf.find",
+      "path": "/articles",
+      "handler": "articles.find",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/sdfs/count",
-      "handler": "sdf.count",
+      "path": "/articles/count",
+      "handler": "articles.count",
       "config": {
         "policies": []
       }
     },
     {
       "method": "GET",
-      "path": "/sdfs/:id",
-      "handler": "sdf.findOne",
+      "path": "/articles/:id",
+      "handler": "articles.findOne",
       "config": {
         "policies": []
       }
     },
     {
       "method": "POST",
-      "path": "/sdfs",
-      "handler": "sdf.create",
+      "path": "/articles",
+      "handler": "articles.create",
       "config": {
         "policies": []
       }
     },
     {
       "method": "PUT",
-      "path": "/sdfs/:id",
-      "handler": "sdf.update",
+      "path": "/articles/:id",
+      "handler": "articles.update",
       "config": {
         "policies": []
       }
     },
     {
       "method": "DELETE",
-      "path": "/sdfs/:id",
-      "handler": "sdf.delete",
+      "path": "/articles/:id",
+      "handler": "articles.delete",
       "config": {
         "policies": []
       }

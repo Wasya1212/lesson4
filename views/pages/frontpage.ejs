@@ -177,9 +177,9 @@
   </header>
   <% news.forEach(article => { %>
     <section class="news__item">
-      <a href="<%= article.link %>">
+      <a href="/news/<%= article.id %>">
         <div class="news__item__picture">
-          <img src="<%= article.image.link %>" alt="<%= article.image.alt %>">
+          <img src="<%= article.preview.link %>" alt="<%= article.preview.alt %>">
       </a>
       </div>
       <div class="news__item__title-container">

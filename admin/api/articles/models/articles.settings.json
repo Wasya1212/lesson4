@@ -1,6 +1,6 @@
 {
   "kind": "collectionType",
-  "collectionName": "Articless",
+  "collectionName": "Articles",
   "info": {
     "name": "Articles"
   },
@@ -10,12 +10,10 @@
   },
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "description": {
-      "type": "richtext",
-      "required": true
+      "type": "richtext"
     },
     "preview": {
       "model": "file",

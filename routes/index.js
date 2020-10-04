@@ -19,7 +19,7 @@ router.get('/', async ctx => {
     topProducts,
     seasonProducts,
     specialProduct: specialProducts[0],
-    news: DB.news
+    news
   });
 });
 
