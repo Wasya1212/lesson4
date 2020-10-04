@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "name": "products"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    },
+    "ingreedients": {
+      "type": "json"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "ice_cream",
+        "cookie",
+        "bun",
+        "dessert",
+        "cupcake",
+        "cake"
+      ],
+      "default": "dessert",
+      "required": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "top",
+        "season",
+        "daily",
+        "special",
+        "recommended"
+      ],
+      "default": "daily",
+      "required": true
+    },
+    "largeImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

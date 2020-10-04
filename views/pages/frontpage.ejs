@@ -5,9 +5,9 @@
         <% sliderProducts.forEach(product => { %>
           <div class="slide splide__slide">
             <div class="picture-container">
-              <a href="<%= product.link %>">
+              <a href="/products/product/<%= product.id %>">
                 <picture>
-                  <source srcset="<%= product.imageLarge.link %>" media="(min-width: 569px)">
+                  <source srcset="<%= product.largeImage.link %>" media="(min-width: 569px)">
                   <img src="<%= product.image.link %>" alt="<%= product.image.alt %>">
                 </picture>
               </a>
@@ -67,7 +67,7 @@
   <% topProducts.forEach(product => { %>
     <div class="top-products__product">
       <div class="top-products__product__picture">
-        <a href="<%= product.link %>">
+        <a href="/products/product/<%= product.id %>">
           <picture>
             <source media="(min-width:650px)" srcset="<%= product.image.link %>">
             <img src="<%= product.image.link %>" alt="<%= product.image.alt %>">
@@ -75,7 +75,7 @@
         </a>
       </div>
       <div class="top-products__product__name-container">
-        <a href="<%= product.link %>">
+        <a href="/products/product/<%= product.id %>">
           <span class="top-products__product__name"><%= product.title %></span>
         </a>
       </div>
@@ -89,7 +89,7 @@
   <% seasonProducts.forEach(product => { %>
     <div class="season-products__product">
       <div class="season-products__product__picture">
-        <a href="<%= product.link %>">
+        <a href="/products/product/<%= product.id %>">
           <picture>
             <source media="(min-width:650px)" srcset="<%= product.image.link %>">
             <img src="<%= product.image.link %>" alt="<%= product.image.alt %>">
@@ -97,7 +97,7 @@
         </a>
       </div>
       <div class="season-products__product__name-container">
-        <a href="<%= product.link %>">
+        <a href="/products/product/<%= product.id %>">
           <span class="season-products__product__name"><%= product.title %></span>
         </a>
       </div>
