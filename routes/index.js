@@ -1,6 +1,7 @@
 const Router = require('koa-router');
 
 const { productsQuery: Product } = require('../modules/product/product.resolver');
+const { newsQuery: News } = require('../modules/news/news.resolver');
 
 const DB = require('../data/products.json');
 
@@ -11,6 +12,7 @@ router.get('/', async ctx => {
   const topProducts = await Product.getProducts({ search: { status: "top" }, limit: 6 });
   const seasonProducts = await Product.getProducts({ search: { status: "season" }, limit: 6 });
   const specialProducts = await Product.getProducts({ search: { status: "special" }, limit: 1 });
+  const news = await News.getNews({ limit: 8 });
 
   await ctx.render('pages/frontpage', {
     sliderProducts,
