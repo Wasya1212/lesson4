@@ -105,12 +105,12 @@
   <% }) %>
   <aside class="season-products__special-product special-product special-season-product">
     <header class="season-products__special-product__title-container">
-      <a href="<%= specialProduct.link %>" class="special-season-product-link special-season-product-link-cake">
+      <a href="/products/product/<%= specialProduct.id %>" class="special-season-product-link special-season-product-link-cake">
         <h4 class="season-products__special-product__title"><%= specialProduct.title %></h4>
       </a>
     </header>
     <picture>
-      <a href="<%= specialProduct.link %>">
+      <a href="/products/product/<%= specialProduct.id %>">
         <source media="(min-width:650px)" srcset="<%= specialProduct.image.link %>">
         <img src="<%= specialProduct.image.link %>" alt="<%= specialProduct.image.alt %>">
       </a>
@@ -118,7 +118,7 @@
     <p><%= specialProduct.description %></p>
     <footer class="season-products__special-product__details-container">
       <div class="season-products__special-product__details">
-        <a href="<%= specialProduct.link %>" class="details-link redirect-link">details</a>
+        <a href="/products/product/<%= specialProduct.id %>" class="details-link redirect-link">details</a>
       </div>
     </footer>
   </aside>
