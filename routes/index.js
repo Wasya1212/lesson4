@@ -8,18 +8,19 @@ const router = new Router();
 
 router.get('/', async ctx => {
   const sliderProducts = await Product.getProducts({
-    search: {
-      status: "recommended"
-    },
+    search: { status: "recommended" },
     limit: 3
   });
 
-  console.log(sliderProducts);
+  const topProducts = await Product.getProducts({
+    search: { status: "top" },
+    limit: 6
+  });
 
   await ctx.render('pages/frontpage', {
     sliderProducts,
-    // sliderProducts: DB.slider,
-    topProducts: DB.topProducts,
+    topProducts,
+    // topProducts: DB.topProducts,
     seasonProducts: DB.seasonProducts,
     specialProduct: DB.specialProduct,
     news: DB.news
