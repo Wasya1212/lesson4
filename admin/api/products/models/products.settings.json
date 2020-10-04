@@ -32,19 +32,6 @@
     "ingreedients": {
       "type": "json"
     },
-    "category": {
-      "type": "enumeration",
-      "enum": [
-        "ice_cream",
-        "cookie",
-        "bun",
-        "dessert",
-        "cupcake",
-        "cake"
-      ],
-      "default": "dessert",
-      "required": true
-    },
     "status": {
       "type": "enumeration",
       "enum": [
@@ -65,6 +52,9 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "category": {
+      "model": "categories"
     }
   }
 }

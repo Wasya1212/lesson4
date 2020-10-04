@@ -13,7 +13,7 @@
       "type": "string",
       "required": true
     },
-    "icon": {
+    "image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [

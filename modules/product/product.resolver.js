@@ -27,6 +27,11 @@ const productsQuery = {
   getProducts: async (args = {}) => {
     const { body: products } = await ProductService.getProducts(args);
     return products.map(parse);
+  },
+
+  getProductsCategories: async () => {
+    const { body: categories } = await ProductService.getProductsCategories();
+    return categories.map(parse);
   }
 };
 

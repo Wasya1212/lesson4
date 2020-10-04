@@ -23,36 +23,13 @@
     <h3 class="categories__title section-title">categories</h3>
   </header>
   <nav class="categories__navigation">
-    <div class="categories__navigation__item">
-      <a href="products/list?category=ice-cream" class="categories__navigation__link">
-        <img src="img/category/ice-cream.png" alt="ice cream image">
-      </a>
-    </div>
-    <div class="categories__navigation__item">
-      <a href="products/list?category=cookies" class="categories__navigation__link">
-        <img src="img/category/cookie.png" alt="cookies image">
-      </a>
-    </div>
-    <div class="categories__navigation__item">
-      <a href="products/list?category=buns" class="categories__navigation__link">
-        <img src="img/category/bun.png" alt="buns image">
-      </a>
-    </div>
-    <div class="categories__navigation__item">
-      <a href="products/list?category=desserts" class="categories__navigation__link">
-        <img src="img/category/dessert.png" alt="desserts image">
-      </a>
-    </div>
-    <div class="categories__navigation__item">
-      <a href="products/list?category=cupcakes" class="categories__navigation__link">
-        <img src="img/category/cupcake.png" alt="cupcakes image">
-      </a>
-    </div>
-    <div class="categories__navigation__item">
-      <a href="products/list?category=cakes" class="categories__navigation__link">
-        <img src="img/category/cake.png" alt="cakes image">
-      </a>
-    </div>
+    <% categories.forEach(category => { %>
+      <div class="categories__navigation__item">
+        <a href="products/?category=<%= category.name %>" class="categories__navigation__link">
+          <img src="<%= category.image.link %>" alt="<%= category.image.alt %>">
+        </a>
+      </div>
+    <% }) %>
   </nav>
   <div class="all-categories">
     <a href="products">

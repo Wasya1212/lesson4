@@ -12,14 +12,18 @@ router.get('/', async ctx => {
   const topProducts = await Product.getProducts({ search: { status: "top" }, limit: 6 });
   const seasonProducts = await Product.getProducts({ search: { status: "season" }, limit: 6 });
   const specialProducts = await Product.getProducts({ search: { status: "special" }, limit: 1 });
+  const categories = await Product.getProductsCategories();
   const news = await News.getNews({ limit: 8 });
+
+  console.log(categories);
 
   await ctx.render('pages/frontpage', {
     sliderProducts,
     topProducts,
     seasonProducts,
     specialProduct: specialProducts[0],
-    news
+    news,
+    categories
   });
 });
 

@@ -26,6 +26,10 @@ class ProductService {
 
     return superagent.get(query);
   }
+
+  async getProductsCategories() {
+    return superagent.get('http://localhost:1337/categories');
+  }
 };
 
 module.exports = new ProductService();
