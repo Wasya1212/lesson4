@@ -6,7 +6,7 @@ const {
 
 function processProductImage(image) {
   return image ? {
-    link: `http://localhost:1337${image.url}`,
+    link: image.url,
     alt: image.alternativeText || ''
   } : null
 }

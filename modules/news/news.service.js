@@ -3,12 +3,12 @@ const { params } = require('../../routes');
 
 class NewsService {
   async getNewsById(id) {
-    return superagent.get(`http://localhost:1337/articles/${id}`);
+    return superagent.get(`https://mirai-restaurant-admin.herokuapp.com/articles/${id}`);
   }
 
   async getNews({ filters, limit, search, sort }) {
     const params = [];
-    let query = 'http://localhost:1337/articles';
+    let query = 'https://mirai-restaurant-admin.herokuapp.com/articles';
 
     if (limit) {
       params.push(`_limit=${limit}`);

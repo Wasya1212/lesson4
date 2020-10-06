@@ -9,7 +9,7 @@ const router = new Router();
 
 router.get('/', async ctx => {
   const sliderProducts = await Product.getProducts({ search: { status: "recommended" }, limit: 3 });
-  const topProducts = await Product.getProducts({ search: { status: "top" }, limit: 6 });
+  const topProducts = await Product.getProducts({ search: { status: "top" }, limit: 6, sort: 'DESC' });
   const seasonProducts = await Product.getProducts({ search: { status: "season" }, limit: 6 });
   const specialProducts = await Product.getProducts({ search: { status: "special" }, limit: 1 });
   const categories = await Product.getProductsCategories();
@@ -30,5 +30,9 @@ router.get('/', async ctx => {
 router.get('/products/product/:id', async ctx => {
   ctx.body = await Product.getProductById(ctx.params.id);
 });
+
+router.get('/admin', async ctx => {
+  ctx.redirect('https://mirai-restaurant-admin.herokuapp.com/admin');
+})
 
 module.exports = router;

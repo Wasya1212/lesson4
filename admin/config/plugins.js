@@ -11,5 +11,13 @@ module.exports = ({ env }) => ({
         ssl: true
       },
     },
+  },
+  upload: {
+    provider: 'cloudinary',
+    providerOptions: {
+      cloud_name: 'dtquxmxcs',
+      api_key: '219447449487377',
+      api_secret: 'YsATAdSo0HSkKKu1Xhp9n4bV3js'
+    }
   }
 });

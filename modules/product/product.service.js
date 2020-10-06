@@ -3,12 +3,12 @@ const { params } = require('../../routes');
 
 class ProductService {
   async getProductById(id) {
-    return superagent.get(`http://localhost:1337/products/${id}`);
+    return superagent.get(`https://mirai-restaurant-admin.herokuapp.com/products/${id}`);
   }
 
   async getProducts({ filters, limit, search, sort }) {
     const params = [];
-    let query = 'http://localhost:1337/products';
+    let query = 'https://mirai-restaurant-admin.herokuapp.com/products';
 
     if (limit) {
       params.push(`_limit=${limit}`);
@@ -20,6 +20,10 @@ class ProductService {
       });
     }
 
+    if (sort) {
+      params.push(`_sort=id:${sort}`);
+    }
+
     if (params.length > 0) {
       query += '?' + params.join('&');
     }
@@ -28,7 +32,7 @@ class ProductService {
   }
 
   async getProductsCategories() {
-    return superagent.get('http://localhost:1337/categories');
+    return superagent.get('https://mirai-restaurant-admin.herokuapp.com/categories');
   }
 };
 
